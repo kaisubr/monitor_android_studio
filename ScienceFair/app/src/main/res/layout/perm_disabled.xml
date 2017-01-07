@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/call_phone_permission_explanation"
+        android:id="@+id/cppdisabledEXPLANATION"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/cppdisabledTITLE"
+        android:layout_alignStart="@+id/cppdisabledTITLE"
+        android:layout_marginRight="32dp"
+        android:textColor="@color/colorText"
+        android:lineSpacingExtra="2dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:elevation="40dp"
+        android:layout_margin="0dp"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textColor="@color/colorText"
+            style="?attr/borderlessButtonStyle"
+            android:id="@+id/helpButtonGrantAccess" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Go to settings"
+            android:textColor="@color/colorText"
+            style="?attr/borderlessButtonStyle"
+            android:drawableEnd="@drawable/ic_chevron_right_white_24dp"
+            android:id="@+id/goToSettingsButtonPermDisabledLayout"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Grant Access"
+        android:id="@+id/cppdisabledTITLE"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="102dp"
+        android:textColor="@color/colorText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp" />
+</RelativeLayout>

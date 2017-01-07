@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <!--
+    Custom attributes for custom number picker
+    -->
+    <declare-styleable name="number_picker_pref">
+        <attr name="max_number" format="integer" />
+        <attr name="min_number" format="integer" />
+        <attr name="default_number" format="integer" />
+        <attr name="format" format="string" />
+    </declare-styleable>
+</resources>

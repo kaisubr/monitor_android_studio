@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_close_black_24dp_4_path"
+    >
+
+    <target
+        android:name = "group_rotate"
+        android:animation = "@animator/rotate_morph"
+        />
+
+    <target
+        android:name = "closeBottomLeft"
+        android:animation = "@animator/close_bottom_left_morph"
+        />
+
+    <target
+        android:name = "closeBottomRight"
+        android:animation = "@animator/close_bottom_right_morph"
+        />
+
+    <target
+        android:name = "closeTopRight"
+        android:animation = "@animator/close_top_right_morph"
+    />
+
+    <target
+        android:name = "closeTopLeft"
+        android:animation = "@animator/close_top_left_morph"
+        />
+</animated-vector>

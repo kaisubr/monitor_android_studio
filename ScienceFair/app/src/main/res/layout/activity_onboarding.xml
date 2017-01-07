@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".OnboardingActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorText"
+            style="?attr/borderlessButtonStyle"
+            android:id="@+id/buttonBack"
+            android:radius="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="32dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="32dp"
+            >
+
+                <ImageView
+                    android:id="@+id/navigationCircle1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/circle_white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:alpha="0.4"
+                    />
+
+                <ImageView
+                    android:id="@+id/navigationCircle2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/circle_white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:alpha="0.4"
+                    />
+
+                <ImageView
+                    android:id="@+id/navigationCircle3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/circle_white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:alpha="0.4"
+                    />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:tint="@color/colorText"
+            style="?attr/borderlessButtonStyle"
+            android:id="@+id/buttonForward"
+            android:radius="10dp"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+</RelativeLayout>

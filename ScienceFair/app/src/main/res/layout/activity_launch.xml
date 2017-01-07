@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="iosf.github.kaisubr.sciencefair.LaunchActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/launch_ripple"
+        android:layout_gravity="center"
+        android:src="@drawable/circle_white"
+        android:alpha="0"
+        android:tint="@color/colorPrimary"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/launch_shield"
+        android:layout_gravity="center"
+        android:src="@drawable/l_outline2"
+        android:scaleX = "2"
+        android:scaleY = "2"
+        android:alpha="0"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/launch_phone"
+        android:layout_gravity="center"
+        android:src="@drawable/l_phone2"
+        android:scaleX = "1.5"
+        android:scaleY = "1.5"
+        android:alpha="0"
+        android:tint="@color/colorText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/app_name"
+        android:id="@+id/textViewAppTitle"
+        android:textColor="@color/colorText"
+        android:layout_marginTop="75dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:alpha="0"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:elevation="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop = "15dp"
+            android:layout_marginRight = "15dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorText"
+            android:text="Unknown"
+            android:id="@+id/textViewDidYouKnow"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+
+
+
+</FrameLayout>

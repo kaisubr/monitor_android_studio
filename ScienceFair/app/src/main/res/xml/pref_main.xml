@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/iosf.github.kaisubr.sciencefair"
+    android:id="@+id/preference_main_screen_parent"
+
+    >
+    <PreferenceCategory
+        android:title="Protection"
+
+        >
+        <!--TODO: What?!.-->
+        <SwitchPreference
+            android:key="pref_protection_status_key"
+            android:title="Protection Status"
+            android:summaryOff="Protection disabled"
+            android:summaryOn="Protection enabled"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_stay_current_portrait_black_24dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            />
+
+        <PreferenceScreen
+            android:key="phone_calls_category_key"
+            android:title="Edit Phone Calls to Monitor"
+            android:icon="@drawable/ic_mode_edit_black_24dp"
+            >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage = "iosf.github.kaisubr.sciencefair"
+                android:targetClass = "iosf.github.kaisubr.sciencefair.EditListActivity"
+                />
+        </PreferenceScreen>
+
+        <SwitchPreference
+            android:key="pref_immediately_block"
+            android:title="Immediately block call"
+            android:summaryOn = "Monitor will immediately block an incoming call if it is necessary to monitor it."
+            android:summaryOff = "Monitor will not block the call. Instead, it will give you a warning message, but still lets you accept the incoming call."
+            android:defaultValue = "true"
+            android:icon="@drawable/ic_call_black_24dp"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Profile"
+        >
+
+        <EditTextPreference
+            android:key="pref_name"
+            android:title="Your name"
+            android:summary="Unknown"
+            android:icon="@drawable/ic_person_black_24dp"
+            />
+
+        <EditTextPreference
+            android:key="pref_user_ph_number"
+            android:title="Your phone number"
+            android:summary="Unknown"
+            android:dialogMessage="This phone number will only be shown if the device phone number could not be found."
+            android:icon="@drawable/ic_call_black_24dp"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Notifications">
+
+        <SwitchPreference
+            android:key="pref_ph_notifications_status_key"
+            android:title="Phone Notifications"
+            android:summaryOff="Notifications disabled"
+            android:summaryOn="Notifications enabled"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            />
+
+        <!-- Dependency of Notifications -->
+        <RingtonePreference
+            android:key="pref_ringtone"
+            android:title="Notification Sound"
+            android:ringtoneType="notification"
+            android:dependency="pref_ph_notifications_status_key"
+            android:icon="@drawable/ic_volume_up_black_24dp"
+            />
+
+
+
+        <SwitchPreference
+            android:key="pref_mail_notifications_status_key"
+            android:title="Email Notifications"
+            android:summaryOff="Notifications disabled"
+            android:summaryOn="Notifications enabled"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_mail_outline_black_24dp"
+            />
+
+        <!-- Dependency of email -->
+        <EditTextPreference
+            android:title="Email Address"
+            android:key="pref_mail_address"
+            android:dependency="pref_mail_notifications_status_key"
+            android:icon="@drawable/ic_email_address"
+            android:tint="@color/colorTextPrimary"
+            />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Recent Calls"
+        >
+
+    <iosf.github.kaisubr.sciencefair.OtherCustomClasses.NumberPickerPreference
+        android:title="Recent calls history length"
+        android:summary="(Default) Showing 8 recent calls"
+        max_number = "20"
+        min_number = "0"
+        default_number = "8"
+        format = "Showing %s recent calls"
+        android:key = "pref_recent_calls_length"
+        android:icon="@drawable/ic_recents"
+        />
+
+        <SwitchPreference
+            android:title="Smooth scroll to top"
+            android:key="pref_smooth_scroll"
+            android:defaultValue="true"
+            android:scrollbars="vertical"
+            android:maxHeight="20dp"
+            android:icon="@drawable/ic_arrow_upward_black_24dp"
+            android:summaryOn='Smooth scroll to top when the "go to top" icon is clicked.'
+            android:summaryOff='Do not smooth scroll to top when the "go to top" icon is clicked (this may improve application performance).'
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Advanced Settings"
+        >
+
+        <ListPreference
+            android:title="Notification Time Delay"
+            android:key="pref_time_delay"
+            android:dependency="pref_ph_notifications_status_key"
+            android:entries="@array/timeEntries"
+            android:entryValues="@array/timeEntryValues"
+            android:icon="@drawable/ic_schedule_black_24dp"
+            android:tint="@color/colorTextPrimary"
+            />
+
+        <SwitchPreference
+            android:title="Monitor all calls"
+            android:key="pref_monitor_all_calls"
+            android:icon="@drawable/ic_call_received_black_24dp"
+            android:summaryOff="Monitoring only selected calls"
+            android:summaryOn="Monitoring all incoming calls"
+            />
+
+        <SwitchPreference
+            android:title="Only monitor on specific days"
+            android:key="pref_monitor_spec_days_checkbox"
+            android:icon="@drawable/ic_call_received_black_24dp"
+            android:summaryOff="Monitoring calls on all days"
+            android:summaryOn="Monitoring calls on specific days"
+            />
+
+        <MultiSelectListPreference
+            android:key="pref_days_enabled_list"
+            android:dependency="pref_monitor_spec_days_checkbox"
+            android:title = "Days enabled"
+            android:summary = "Set specific days of the week that Monitor should check incoming calls. Default is all."
+            android:entries="@array/listOfDays"
+            android:entryValues="@array/listOfDaysEntryValues"
+            android:icon="@drawable/ic_call_black_24dp"
+            />
+
+        <!--TODO: Add a reset all preference (custom).-->
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

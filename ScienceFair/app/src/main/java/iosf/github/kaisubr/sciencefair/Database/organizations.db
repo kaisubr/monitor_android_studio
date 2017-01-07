@@ -1,0 +1,17 @@
+[Banks]
+JPMorgan Chase & Co. |12122706000
+Bank of America Corp. Customer Serv. |18004321000
+Bank of America Corp. Tech Supp. |18009336262
+Bank of America Corp. Cred Card Supp. |18007329194
+Citigroup Inc. |18882484226
+Wells Fargo & Co. |18008693557
+U.S. Bancorp |18008722657
+U.S. Bancorp |18772020043
+Bank of New York Mellon Corp. |9723626220
+PNC Financial Services Group Inc. |18887622265
+Capital One Financial Corp. |18773834802
+Capital One Financial Corp. |18002274825
+
+- end -
+[Govt] SEE {https://www.usa.gov/state-government/[state]} at class "spk" and "tel"
+[to be completed by application] -> SEE govt.db

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/main_NAV_DRAWER_GROUP" android:checkableBehavior="single">
+        <item
+            android:id="@+id/recentCalls_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_recents"
+            android:title="Recent Calls"
+            />
+
+        <item android:id="@+id/fileAComplaint_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_mode_edit_black_24dp"
+            android:title="File a Complaint"
+            />
+
+        <item android:id="@+id/protection_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_phone_locked_black_24dp"
+            android:title="Protection Status"
+            />
+
+        <item android:id="@+id/profile_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_profile_black"
+            android:title="View Profile"
+            />
+
+    </group>
+
+    <group android:id="@+id/other_NAV_DRAWER_GROUP" android:checkableBehavior="single">
+        <item android:id="@+id/settings_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"
+            />
+
+        <item android:id="@+id/help_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Help"
+            />
+
+        <item android:id="@+id/feedback_DRAWER_ITEM"
+            android:checked="false"
+            android:icon="@drawable/ic_announcement_black_24dp"
+            android:title="Send Feedback"
+            />
+    </group>
+</menu>
