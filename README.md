@@ -7,7 +7,7 @@
 --------
 
 <p align="center">
-  <img src="mon.png" width="50%" />
+  <img src="mon.png" width="337px" height="183px" />
   <br/>
   <i>Handling an incoming call from organization database (screenshot of app)</i>
 </p>
